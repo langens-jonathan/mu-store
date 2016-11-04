@@ -1,0 +1,18 @@
+{{#md-navbar name='MU-SEMTECH STORE Manager' class='blue accent-3'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+  {{#link-to 'index' tagName='li'}}
+    {{link-to 'Home' 'index'}}
+  {{/link-to}}
+  {{#link-to 'microServices' tagName='li'}}
+    {{link-to 'MicroServices' 'microServices'}}
+  {{/link-to}}
+{{/md-navbar}}
+
+
+<div style="width:80%; margin:auto; padding:10px;">
+
+{{outlet}}
+
+</div>
+

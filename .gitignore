@@ -1,0 +1,28 @@
+# Virtuoso files /data/db
+/data/db/clean-logs.sh
+/data/db/*.log
+/data/db/virtuoso-temp.db
+/data/db/virtuoso.db
+/data/db/virtuoso.ini
+/data/db/virtuoso.lck
+/data/db/virtuoso.log
+/data/db/virtuoso.pxa
+/data/db/virtuoso.trx
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/store-manager/dist
+/store-manager/tmp
+
+# dependencies
+/store-manager/node_modules
+/store-manager/bower_components
+
+# misc
+/store-manager/.sass-cache
+/store-manager/connect.lock
+/store-manager/coverage/*
+/store-manager/libpeerconnection.log
+/store-manager/npm-debug.log
+/store-manager/testem.log

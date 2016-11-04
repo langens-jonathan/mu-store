@@ -1,0 +1,122 @@
+{{md-input value=title label='Title' class="col s12" validate=true}}
+{{md-textarea label='description' value=description class="col s12"}}
+{{md-textarea label='documentation' value=documentation class="col s12"}}
+{{md-input value=dockerName label='Docker Name' class="col s12" validate=true}}
+{{md-input value=imageLocation label='Image Location' class="col s12" validate=true}}
+{{md-input value=configureCommand label='Configure Command' class="col s12"}}
+
+<br>
+{{#md-table content=configFiles as |row|}}
+  {{#md-table-col row=row key='name' header='File Name'}}
+    {{row.name}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='location' header='Location'}}
+    {{row.location}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='type' header='File Type'}}
+    {{row.type}}
+  {{/md-table-col}}
+{{/md-table}}
+
+{{#if creating}}
+<br><p>new config file:</p>
+{{md-input value=cfName label='Name' class="col s12" validate=true}}
+{{md-input value=cfLocation label='Location' class="col s12" validate=true}}
+{{md-input value=cfType label='Type' class="col s12"}}
+{{#md-btn action='cancelAddConfigFile'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Cancel Config File
+{{/md-btn}}
+{{#md-btn action='addConfigFile'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Add Config File
+{{/md-btn}}
+{{else}}
+{{#md-btn action='startAddConfigFile'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Add Config File
+{{/md-btn}}
+{{/if}}
+<br><br>
+
+
+<br>
+{{#md-table content=endpoints as |row|}}
+  {{#md-table-col row=row key='location' header='Location'}}
+    {{row.location}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='description' header='Description'}}
+    {{row.description}}
+  {{/md-table-col}}
+{{/md-table}}
+
+{{#if addingEndpoint}}
+<br><p>new endpoint:</p>
+{{md-input value=epLocation label='Location' class="col s12" validate=true}}
+{{md-textarea label='description' value=epDescription class="col s12"}}
+{{#md-btn action='cancelAddEndpoint'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Cancel Endpoint
+{{/md-btn}}
+{{#md-btn action='addEndpoint'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Add Endpoint
+{{/md-btn}}
+{{else}}
+{{#md-btn action='startAddEndpoint'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Add Endpoint
+{{/md-btn}}
+{{/if}}
+<br><br>
+
+
+
+<br>
+{{#md-table content=versions as |row|}}
+  {{#md-table-col row=row key='name' header='Name'}}
+    {{row.name}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='tag' header='Tag'}}
+    {{row.tag}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='description' header='Description'}}
+    {{row.description}}
+  {{/md-table-col}}
+{{/md-table}}
+
+{{#if addingVersion}}
+<br><p>new version:</p>
+{{md-input value=verName label='name' class="col s12" validate=true}}
+{{md-input value=verTag label='tag' class="col s12" validate=true}}
+{{md-textarea label='description' value=verDescription class="col s12"}}
+{{#md-btn action='cancelAddVersion'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Cancel Version
+{{/md-btn}}
+{{#md-btn action='addVersion'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Add Version
+{{/md-btn}}
+{{else}}
+{{#md-btn action='startAddingVersion'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Add Version
+{{/md-btn}}
+{{/if}}
+<br><br>
+
+{{#md-btn action='create'
+	buttonType='flat'
+	class='blue accent-2 white-text'}}
+	Create
+{{/md-btn}}

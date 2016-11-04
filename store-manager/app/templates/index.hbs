@@ -1,0 +1,14 @@
+<h1>Welcome to the MU-SEMTECH Store Manager</h1>
+<h3>What is the use of this tool?</h3>
+<p>The Store Manager app serves to create and manager the microservices that are offered on a single store. This app has no consuming functionality what so ever, it is only used to facilitate the adminstrative process of micro service publication.</p>
+<h3>API</h3>
+<p>This store offers a JSON API REST endpoint with the following resources:
+<ul><li>MicroServices</li><li>Endpoints</li><li>Versions</li><li>Config Files</li></ul></p>
+<h3>Technical setup</h3>
+<p>The store is a simple mu semtech setup with only the basic properties and a mu-cl-resources with the config needed to provide the previously describe REST API.</p>
+<h3>What still needs to be done?</h3>
+<p>There should be authentication protection so that without the correct username and password you cannot do anything but GET's on the store's REST endpoint</p>
+<h3>FAQ</h3>
+<ul>
+<li>If you get no data: check that you proxy the ember single page app to the correct store URL (for more info google: 'ember --proxy http://')</li>
+</ul>

@@ -1,0 +1,25 @@
+{{#md-table content=model as |row|}}
+  {{#md-table-col row=row key='id' header='Id'}}
+    {{row.id}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='title' header='Title'}}
+    {{row.title}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='description' header='Description'}}
+    {{row.description}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='dockerName' header='Docker Name'}}
+    {{row.dockerName}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='configureCommand' header='Configure Command'}}
+    {{row.configureCommand}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='id' header=''}}
+    {{md-btn action='edit' class='blue white-text' text="EDIT" actionArg=row}}
+  {{/md-table-col}}
+  {{#md-table-col row=row key='id' header=''}}
+    {{md-btn action='delete' class='red white-text' text="DELETE" actionArg=row}}
+  {{/md-table-col}}
+{{/md-table}}
+
+{{md-btn action='new' class='blue white-text' text="NEW"}}
